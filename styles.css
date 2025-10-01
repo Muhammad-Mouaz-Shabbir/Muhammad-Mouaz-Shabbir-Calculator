@@ -1,0 +1,82 @@
+:root {
+  --calc-bg: #f3f6fa;
+  --calc-surface: #ffffffcc;
+  --calc-shadow-light: rgba(255, 255, 255, 0.9);
+  --calc-shadow-dark: rgba(12, 20, 33, 0.08);
+  --operator: #ff8a3d;
+  --operator-dark: #e5732a;
+  --accent: #5b8cff;
+  --text-dark: #0b1320;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8eef6 0%, #f7fafc 100%);
+  color: var(--text-dark);
+}
+
+.calculator.card {
+  background: var(--calc-bg);
+  border: none;
+  border-radius: 1.25rem;
+  box-shadow: 12px 12px 24px var(--calc-shadow-dark), -8px -8px 18px var(--calc-shadow-light);
+  max-width: min(92vw, 420px);
+  width: 100%;
+}
+
+.calc-display {
+  background: #0f1726;
+  color: #e9f0ff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4.5vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), inset 0 -4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.keypad .btn.calc-btn {
+  border: none;
+  border-radius: 0.9rem;
+  padding: clamp(0.7rem, 2.5vw, 1rem) 0;
+  font-size: clamp(1.1rem, 3.3vw, 1.4rem);
+  font-weight: 600;
+  width: 100%;
+  background: linear-gradient(180deg, var(--calc-surface), #eef3f9);
+  color: var(--text-dark);
+  box-shadow: 6px 6px 14px var(--calc-shadow-dark), -4px -4px 10px var(--calc-shadow-light);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+.keypad .btn.calc-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.keypad .btn.calc-btn:active {
+  transform: translateY(0);
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 6px rgba(255, 255, 255, 0.6);
+}
+
+.btn-operator {
+  background: linear-gradient(180deg, #ffd2b3, #ffb88b);
+  color: #4a2a14;
+}
+
+.btn-operator:hover { filter: brightness(1.04); }
+
+.btn-equals {
+  background: linear-gradient(180deg, #b9cbff, #85a6ff);
+  color: #0b1a3a;
+}
+
+.btn-utility {
+  background: linear-gradient(180deg, #f2f6fb, #e8eef6);
+  color: #2a3447;
+}
+
+.row-gap { row-gap: 0.75rem; }
+
+
